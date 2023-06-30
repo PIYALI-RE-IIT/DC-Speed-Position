@@ -1,0 +1,647 @@
+/* This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.*/
+
+
+.img-container {
+    display: inline-block;
+    position: relative;
+}
+/*--------------------motor brake set up------------------*/
+#opot_holder{
+	z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    top: -61.6%;
+    left: 41%;
+}
+#opot_top{
+	z-index: 3;
+    position: absolute;
+    width: 21%;
+    height: 19%;
+    top: -53.6%;
+    opacity: 0.6;
+    left: 83%;
+}
+#opot{
+	z-index: 2;
+    position: absolute;
+    width: 74%;
+    height: 66%;
+    top: -46%;
+    left: 56.8%;
+}
+
+#opot_plate{
+	
+	    position: absolute;
+    width: 77%;
+    height: 45%;
+    top: -99.6%;
+    left: 55%;
+}
+#ipot{
+	  z-index: 2;
+    position: absolute;
+    width: 75%;
+    height: 72%;
+    top: 10%;
+    left: 16%;
+}
+#ipot_top{
+	z-index: 3;
+    position: absolute;
+    width: 21%;
+    height: 17%;
+    top: 8.4%;
+    opacity: 0.6;
+    left: 42%;
+
+}
+
+#ipot_plate{
+	
+	    position: absolute;
+    width: 70%;
+    height: 48%;
+    top: -41.6%;
+    left: 17%;
+}
+/*#rotor{
+	
+	position: absolute;
+    width: 3%;
+    height: 50%;
+    top: 18.4%;
+    left: 87.5%;
+}
+
+.rotateRotor{
+	animation:motion 1s linear infinite;
+	
+}
+@keyframes motion {
+  0%, 100% {
+    top: 16%;
+  }
+  50% {
+    top: 20%;
+  }
+}*/
+#feedbk_select{
+	position: absolute;
+    width: 28%;
+    height: 22%;
+    top: 55.4%;
+    left: 46.5%;
+    transform: rotate(21deg);
+}
+#ammeter{
+	position: absolute;
+    width: 60.3%;
+    height: 18%;
+    top: 35.6%;
+    left: 19%;	
+}
+
+#brake_change{
+	position: absolute;
+    top: 75.6%;
+    left: 81%;
+}
+
+#V03{
+	position: absolute;
+    left: 7.2%;
+    bottom: 100%;
+    width: 24%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}	 
+ 
+ #V04{
+	position: absolute;
+    left: 56.2%;
+    bottom: 100%;
+    width: 24%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}
+ 
+
+
+
+
+
+
+
+
+
+
+
+ th, td {
+  border: 1px solid black;
+  /*border-collapse: collapse;*/
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
+
+
+/* Attenuator portion*/
+ #bd1{
+    position: absolute;
+    left: 89.8%;
+    bottom: 87.5%;
+    padding: 4px;
+    
+  }
+   #bd2{
+    position: absolute;
+    left: 90.2%;
+    bottom: 79.3%;
+    padding: 4px;
+	
+  }
+  #bd3{
+    position: absolute;
+    left: 90.7%;
+    bottom: 71%;
+    padding: 4px;
+}
+	
+  
+   #bd4{
+	position: absolute;
+    left: 90%;
+    bottom: 53.6%;
+    padding: 4px;
+	
+  }
+   #bd5{
+    position: absolute;
+    left: 90%;
+    bottom: 45%;
+    padding: 4px;
+	
+  }
+
+ #bd6{
+    position: absolute;
+    left: 90%;
+    bottom: 35.3%;
+    padding: 4px;    
+ }
+ 
+ 
+ 
+ 
+  
+/*----Op-AMP UNIT-----*/
+#bd7{
+   position: absolute;
+    left: 8.9%;
+    bottom: 46.7%;
+    padding: 4px;
+    
+  }
+   #bd8{
+    position: absolute;
+    left: 9.2%;
+    bottom: 34.3%;
+    padding: 4px;
+	
+  }
+  #bd9{
+    position: absolute;
+    left: 9.3%;
+    bottom: 21.3%;
+    padding: 4px;
+}	
+  
+   #bd10{
+    position: absolute;
+    left: 36.6%;
+    bottom: 85.5%;
+    padding: 4px;
+	
+  }
+   #bd11{
+    position: absolute;
+    left: 47.9%;
+    bottom: 85.6%;
+    padding: 4px;
+	
+  }
+	#bd12{
+    position: absolute;
+    left: 59.2%;
+    bottom: 85.8%;
+    padding: 4px;
+	}	
+  
+   #bd13{
+	position: absolute;
+    left: 37.6%;
+    bottom: 70.5%;
+    padding: 4px;
+  }
+  #bd14{
+	position: absolute;
+    left: 59.7%;
+    bottom: 71.3%;
+    padding: 4px;
+  }  
+ 
+   #bd15{
+	position: absolute;
+    left: 84.4%;
+    bottom: 34.3%;
+    padding: 4px;
+  }
+   #bd16{
+	position: absolute;
+    left: 84.6%;
+    bottom: 23.5%;
+    padding: 4px;
+  }
+ 
+ #refV{
+	 position: absolute;
+	left: 18.2%;
+    bottom: 100%;
+    width: 23%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}
+	
+#errV{
+	position: absolute;
+    left: 58.2%;
+    bottom: 100%;
+    width: 24%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}	 
+ 
+ 
+ 
+/*-----Servo amp--*/ 
+ 
+#bd17{
+   position: absolute;
+    left: 17.6%;
+    bottom: 52.7%;
+    padding: 4px;
+    
+  }
+   #bd18{
+    position: absolute;
+    left: 17%;
+    bottom: 39.8%;
+    padding: 4px;
+	
+  }
+  #bd19{
+    position: absolute;
+    left: 38.3%;
+    bottom: 22.5%;
+    padding: 4px;
+}	
+  
+   #bd20{
+    position: absolute;
+    left: 52.9%;
+    bottom: 22.5%;
+    padding: 4px;
+	
+  }
+   #bd21{
+    position: absolute;
+    left: 67.5%;
+    bottom: 22.6%;
+    padding: 4px;
+	
+  }
+	#bd22{
+    position: absolute;
+    left: 54%;
+    bottom: 66.9%;
+    padding: 4px;
+	}	
+  
+   #bd23{
+	position: absolute;
+    left: 73.6%;
+    bottom: 67.5%;
+    padding: 4px;
+  }
+  #bd24{
+	position: absolute;
+    left: 54%;
+    bottom: 52.4%;
+    padding: 4px;
+  }  
+ 
+   #bd25{
+	position: absolute;
+    left: 74.4%;
+    bottom: 53%;
+    padding: 4px;
+  }
+   #bd26{
+	position: absolute;
+    left: 53.8%;
+    bottom: 39.5%;
+    padding: 4px;
+  } 
+ #bd27{
+	position: absolute;
+    left: 74.8%;
+    bottom: 39.8%;
+    padding: 4px;
+  } 
+ #bd28{
+	position: absolute;
+    left: 32.2%;
+    bottom: 9%;
+    padding: 4px;
+  } 
+
+/*------power supply---*/
+#bd29{
+	position: absolute;
+    left: 23%;
+    bottom: 40.5%;
+    padding: 4px;
+  }
+#bd30{
+    position: absolute;
+    left: 23%;
+    bottom: 32.5%;
+    padding: 4px;
+	
+  }
+   #bd31{
+    position: absolute;
+    left: 23.1%;
+    bottom: 24.7%;
+    padding: 4px;
+	
+  }
+	#bd32{
+    position: absolute;
+    left: 39.5%;
+    bottom: 36.6%;
+    padding: 4px;
+	}	
+  
+   #bd33{
+	position: absolute;
+    left: 58.2%;
+    bottom: 36.9%;
+    padding: 4px;
+  }
+  #bd34{
+	position: absolute;
+    left: 76.7%;
+    bottom: 40.6%;
+    padding: 4px;
+  }  
+ 
+   #bd35{
+	position: absolute;
+    left: 76.7%;
+    bottom: 32.7%;
+    padding: 4px;
+  }
+   #bd36{
+	position: absolute;
+    left: 77.6%;
+    bottom: 25%;
+    padding: 4px;
+  } 
+ #bd37{
+	position: absolute;
+    left: 49.2%;
+    bottom: 28.7%;
+    padding: 4px;
+  } 
+  
+  #togsw{
+	position: absolute;
+    left: 70.5%;
+    bottom: 68.5%;
+    width: 7%;
+    height: 5%;	
+	}
+#powerled{
+	position: absolute;
+    left: 20.2%;
+    bottom: 67%;
+    width: 11%;
+    height: 7%;	
+	}
+ /*---dc motor tacho unit--*/
+
+ #bd38{
+        /* visibility: hidden; */
+    position: absolute;
+    left: 42.1%;
+    bottom: 127.7%;
+    padding: 4px;
+	
+  }
+	#bd39{
+    position: absolute;
+    left: 73.5%;
+    bottom: 188.6%;
+    padding: 4px;
+	}
+  
+   #bd40{
+	position: absolute;
+    left: 113.2%;
+    bottom: 188.6%;
+    padding: 4px;
+  }
+  #bd41{
+	position: absolute;
+    left: 81.5%;
+    bottom: 178.6%;
+    padding: 4px;
+  }  
+ 
+   #bd42{
+	position: absolute;
+    left: 105%;
+    bottom: 178.6%;
+    padding: 4px;
+  }
+   #bd43{
+	position: absolute;
+    left: 94.2%;
+    bottom: 167.8%;
+    padding: 4px;
+  } 
+	
+/*#tachoV{
+	position: absolute;
+    left: 37.2%;
+    bottom: 63%;
+    width: 11%;
+    height: 13%;
+	text-align:center;
+	background-color:black;
+	color:red;
+	font-weight:bold;
+	}	
+#tachospeed{
+	position: absolute;
+    left: 80.2%;
+    bottom: -16%;
+    width: 15%;
+    height: 13%;
+	text-align:center;
+	background-color:black;
+	color:red;
+	font-weight:bold;
+	}	
+
+/*-----PreAmp unit------*/
+
+ #bd44{
+	position: absolute;
+    left: 38.9%;
+    bottom: 86%;
+    padding: 4px;
+}
+  
+  #bd45{
+	position: absolute;
+    left: 47.8%;
+    bottom: 86%;
+    padding: 4px;
+  }  
+ 
+   #bd46{
+	position: absolute;
+    left: 56.2%;
+    bottom: 86.2%;
+    padding: 4px;
+  }
+   #bd47{
+	position: absolute;
+    left: 77.8%;
+    bottom: 54.3%;
+    padding: 4px;
+  } 
+#bd48{
+	position: absolute;
+    left: 78%;
+    bottom: 41.7%;
+    padding: 4px;
+  } 
+
+ #bd49{
+	position: absolute;
+    left: 14%;
+    bottom: 33.3%;
+    padding: 4px;
+  } 
+  
+ #bd50{
+	position: absolute;
+    left: 14%;
+    bottom: 46.2%;
+    padding: 4px;
+  } 
+  
+#bd51{
+	position: absolute;
+    left: 14.2%;
+    bottom: 60.9%;
+    padding: 4px;
+  }  
+ #togsw2{
+	position: absolute;
+    left: 47.8%;
+    bottom: 43.5%;
+    width: 7%;
+    height: 7%;	
+	} 
+  
+  
+ #bd52{
+       
+    position: absolute;
+    left: 23.1%;
+    bottom: 132.6%;
+    padding: 4px;
+	
+  }
+	#bd53{
+    position: absolute;
+    left: 49%;
+    bottom: 133.6%;
+    padding: 4px;
+	}
+  
+   #bd54{
+	position: absolute;
+    left: 75.2%;
+    bottom: 132.6%;
+    padding: 4px;
+  }
+  #bd55{
+	position: absolute;
+    left: 24%;
+    bottom: 114.6%;
+    padding: 4px;
+  }  
+ 
+   #bd56{
+	position: absolute;
+    left: 73.2%;
+    bottom: 113.6%;
+    padding: 4px;
+  } 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+

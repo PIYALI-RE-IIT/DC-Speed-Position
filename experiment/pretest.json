@@ -1,0 +1,122 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Mark the wrong option. Which of the following cause and effect behaviour in speed control is correct when field resistance is increased.",
+      "answers": {
+        "a": "  Decrease in flux ",
+        "b": "Increase in armature current",
+        "c": "Increase in EMF",
+        "d": "Decrease in speed"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Small DC motors have best speed control by _________",
+      "answers": {
+        "a": " armature voltage control",
+        "b": "field resistance control",
+        "c": "any of the methods",
+        "d": "none of the mentioned"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the following statements regarding speed control of dc motor.<br/>1)Field control method is used to vary the speed of the motor above the rated speed<br/>2)Armature resistance control method is used to vary speed below or above the rated speed.<br/>which one is correct?",
+      "answers": {
+        "a": "1 only",
+        "b": "1 and 2 both",
+        "c": " 2 only",
+        "d": "None"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The torque limit of speed for a shunt motor _________",
+      "answers": {
+        "a": "remains constant till base speed",
+        "b": "remains constant after base speed",
+        "c": "varies linearly after base speed",
+        "d": "varies inversely till base speed"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The most economical method of electrical braking is",
+      "answers": {
+        "a": "Plugging",
+        "b": "Dynamic braking with sel-exitation",
+        "c": "Regenerative braking",
+        "d": "None of these"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Speed control by ward-leonard method gives uniform speed variation",
+      "answers": {
+        "a": "In one direction",
+        "b": "In both direction",
+        "c": "Below normal speed",
+        "d": "Above normal speed"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },	
+	
+	
+	{
+      "question": "For a dc shunt motor if exitation is changed,then",
+      "answers": {
+        "a": "Torque will remain constant",
+        "b": "Torque will change but power will remain constant",
+        "c": "Torque and Power both will change",
+        "d": "All the torque,speed and power will change"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "for driving a dc motor, ac must be converted to dc and then only fed to dc motor armature for its speed control ",
+	  "answers": {
+        "a": "True",
+        "b": "False"
+        
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "A 250-V dc series motor has armature and series-field resistances o f 0.25 fl and 0.15 fl respectively.Calculate the current for developing a torque o f 80 Nm at 1200 rpm.",
+      "answers": {
+        "a": "30A",
+        "b": "43.2A",
+        "c": "15A",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	
+	
+	
+	
+	{
+	 "question": " With the increase in temperature, the speed of series and shunt motor will",
+      "answers": {
+        "a": "Increase, decrease",
+        "b": "Decrease, increase",
+        "c": "Increase, increase",
+        "d": "Decrease, decrease,"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

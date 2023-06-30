@@ -1,0 +1,279 @@
+/* This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.*/
+
+
+.img-container {
+    display: inline-block;
+    position: relative;
+}
+
+#ammeter{
+	position: absolute;
+    width: 60.3%;
+    height: 18%;
+    top: 35.6%;
+    left: 19%;	
+}
+
+
+ th, td {
+  border: 1px solid black;
+  /*border-collapse: collapse;*/
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
+
+
+
+/* Attenuator portion*/
+ #bd1{
+    position: absolute;
+    left: 89.8%;
+    bottom: 87.5%;
+    padding: 4px;
+    
+  }
+   #bd2{
+    position: absolute;
+    left: 90.2%;
+    bottom: 79.3%;
+    padding: 4px;
+	
+  }
+  #bd3{
+    position: absolute;
+    left: 90.7%;
+    bottom: 71%;
+    padding: 4px;
+}
+	
+  
+   #bd4{
+	position: absolute;
+    left: 90%;
+    bottom: 53.6%;
+    padding: 4px;
+	
+  }
+   #bd5{
+    position: absolute;
+    left: 90%;
+    bottom: 45%;
+    padding: 4px;
+	
+  }
+
+ #bd6{
+    position: absolute;
+    left: 90%;
+    bottom: 35.3%;
+    padding: 4px;    
+ }
+ 
+ 
+ 
+ #IV{
+	 position: absolute;
+	left: 18.2%;
+    bottom: 100%;
+    width: 23%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}
+	
+#V03{
+	position: absolute;
+    left: 7.2%;
+    bottom: 100%;
+    width: 24%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}	 
+ 
+ #V04{
+	position: absolute;
+    left: 56.2%;
+    bottom: 100%;
+    width: 24%;
+    height: 7%;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+	}
+ 
+
+/*------power supply---*/
+#bd7{
+	position: absolute;
+    left: 23%;
+    bottom: 40.5%;
+    padding: 4px;
+  }
+#bd8{
+    position: absolute;
+    left: 23%;
+    bottom: 32.5%;
+    padding: 4px;
+	
+  }
+   #bd9{
+    position: absolute;
+    left: 23.1%;
+    bottom: 24.7%;
+    padding: 4px;
+	
+  }
+	#bd10{
+    position: absolute;
+    left: 39.5%;
+    bottom: 36.6%;
+    padding: 4px;
+	}	
+  
+   #bd11{
+	position: absolute;
+    left: 58.2%;
+    bottom: 36.9%;
+    padding: 4px;
+  }
+  #bd12{
+	position: absolute;
+    left: 76.7%;
+    bottom: 40.6%;
+    padding: 4px;
+  }  
+ 
+   #bd13{
+	position: absolute;
+    left: 76.7%;
+    bottom: 32.7%;
+    padding: 4px;
+  }
+   #bd14{
+	position: absolute;
+    left: 77.6%;
+    bottom: 25%;
+    padding: 4px;
+  } 
+ #bd15{
+	position: absolute;
+    left: 49.2%;
+    bottom: 28.7%;
+    padding: 4px;
+  } 
+  
+  #togsw{
+	position: absolute;
+    left: 70.5%;
+    bottom: 68.5%;
+    width: 7%;
+    height: 5%;	
+	}
+#powerled{
+	position: absolute;
+    left: 20.2%;
+    bottom: 67%;
+    width: 11%;
+    height: 7%;	
+	}
+ 
+
+/*-----PreAmp unit------*/
+
+ #bd16{
+	position: absolute;
+    left: 38.9%;
+    bottom: 86%;
+    padding: 4px;
+}
+  
+  #bd17{
+	position: absolute;
+    left: 47.8%;
+    bottom: 86%;
+    padding: 4px;
+  }  
+ 
+   #bd18{
+	position: absolute;
+    left: 56.2%;
+    bottom: 86.2%;
+    padding: 4px;
+  }
+   #bd19{
+	position: absolute;
+    left: 77.8%;
+    bottom: 54.3%;
+    padding: 4px;
+  } 
+#bd20{
+	position: absolute;
+    left: 78%;
+    bottom: 41.7%;
+    padding: 4px;
+  } 
+
+ #bd21{
+	position: absolute;
+    left: 14%;
+    bottom: 33.3%;
+    padding: 4px;
+  } 
+  
+ #bd22{
+	position: absolute;
+    left: 14%;
+    bottom: 46.2%;
+    padding: 4px;
+  } 
+  
+#bd23{
+	position: absolute;
+    left: 14.2%;
+    bottom: 60.9%;
+    padding: 4px;
+  }  
+ #togsw2{
+	position: absolute;
+    left: 47.8%;
+    bottom: 43.5%;
+    width: 7%;
+    height: 7%;	
+	} 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
