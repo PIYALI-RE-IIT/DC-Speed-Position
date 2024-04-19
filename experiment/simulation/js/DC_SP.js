@@ -177,8 +177,10 @@ function rotate1(){
 	
 	document.getElementById('knob1').style['pointer-events'] = "auto";
 	document.getElementById('knob2').style['pointer-events'] = "auto";
+	
+	
 	document.getElementById('brake_change').disabled = false;
-
+	
 	setTimeout(function(){
 		document.getElementById('ammeter').src = "./images/amp_pointer2.jpg";	
 		},20000)
@@ -198,6 +200,8 @@ else if(document.getElementById('togsw').src.match("./images/on.png")){
 		},1000)
 	
 	}
+	
+	
  }
 ///pre amplifier box toggle switch
  function preAmp_on(){
@@ -221,10 +225,10 @@ var knbCount = 	document.getElementById('Au_upchk').value;
 
 ///we have 10k resistance in two potentiometers of Au unit, we got through calculation and lab test data 5 knob value = 10% of 10k resistance but from 0 t05 knob value no tacho volt or motor speed
 ///is generated,for more the 5 knob value we get abrupt change in speed as well as tacho volt. studying the characteristics of the rotating knob in lab found a conclution follows 
-if(document.getElementById('Au_up').value < 5){
+if(document.getElementById('Au_up').value < 4.5){
 var tachoVolt  = 0;
 }
-else if(document.getElementById('Au_up').value >= 5 && document.getElementById('Au_up').value <10.1){	
+else if(document.getElementById('Au_up').value >= 4.5 && document.getElementById('Au_up').value <10.1){	
  var tachoVolt = math.add(1.08,math.multiply(knbCount , 0.28));
 }
 
@@ -526,7 +530,7 @@ document.getElementById('tachoV').value =tachoVolt;
 
 }
 
-function Wheel_SpeedUp(){
+/* function Wheel_SpeedUp(){
 	
 	var wheel = document.getElementById('rotor');	
 	
@@ -554,6 +558,38 @@ function Wheel_SpeedUp(){
 		}
 	////////////////////////////////////////////////////////////////////////////////		
 		
+} */
+function Wheel_SpeedUp(){
+	
+	var wheel = document.getElementById('rotor');	
+	var tachov = math.multiply(0.09,math.round(Number(document.getElementById('tachoV').value)));
+	///for tacho const function motor speed increase
+	if (document.getElementById('partchk').value == 1 && document.getElementById('Au_up').value >= 4.5){
+		rotation = tachov;
+		 document.getElementById('rotor').classList.add("rotateRotor");
+		 wheel.style["-webkit-animation-duration"] = math.subtract(1,rotation)+"s";
+		 
+		}
+	////////////////////////////////////////////////////////////////////////////////
+		
+///for openloop speed function motor speed increase
+	if (document.getElementById('partchk').value == 2 && Math.abs(document.getElementById('refV').value) >= 4.2){
+		rotation = tachov;
+		 document.getElementById('rotor').classList.add("rotateRotor");
+		 wheel.style["-webkit-animation-duration"] = math.subtract(1,rotation)+"s";
+		 
+		}
+	////////////////////////////////////////////////////////////////////////////////
+		
+	//for closedloop speed function motor speed increase
+	if (document.getElementById('partchk').value == 3 && Math.abs(document.getElementById('refV').value) >= 4.2){
+		rotation = tachov;
+		 document.getElementById('rotor').classList.add("rotateRotor");
+		 wheel.style["-webkit-animation-duration"] = math.subtract(1,rotation)+"s";
+		 
+		}
+	////////////////////////////////////////////////////////////////////////////////		
+		
 }
 
 function Wheel_SpeedDown(){
@@ -565,7 +601,7 @@ function Wheel_SpeedDown(){
 	rotation-=0.03;
 	wheel.style["-webkit-animation-duration"] = math.subtract(1,rotation)+"s";		 	
 	}
-	if (document.getElementById('partchk').value == 1 && document.getElementById('Au_up').value < 5){
+	if (document.getElementById('partchk').value == 1 && document.getElementById('Au_up').value < 4.5){
 		 document.getElementById('rotor').classList.remove("rotateRotor");
 	} 
 	/////////////////////////////////////////////////////////////////////////	
@@ -749,7 +785,7 @@ createTable2();
       //animationEnabled: true,
 		  //animationDuration: 10000, 
 	  title:{
-      text: "Speed N(rpm) Vs. Tacho generator voltage Vg(volts) Plot ",
+      text: "Motor Speed (rpm) Vs. Tacho generator voltage (Volts) Plot ",
 	  fontSize: 20,
 	  fontColor:"#C90923",
 	  fontFamily: "times new roman",
@@ -759,7 +795,7 @@ createTable2();
 	  
 	  {
         interlacedColor: "#AFEEF8",
-        title: "voltage Vg(volts)"
+        title: "Voltage (Volts)"
       },
 	  
 	  
@@ -768,7 +804,7 @@ createTable2();
 	  
     axisY: 
 	      {// Y axis
-            title: "Speed N(rpm)",
+            title: "Speed (rpm)",
 			
 			//maximum:28,
         },
@@ -813,7 +849,7 @@ createTable2();
       //animationEnabled: true,
 		  //animationDuration: 10000, 
 	  title:{
-      text: "Speed N(rpm) Vs. Braking Load(in Units) Plot ",
+      text: "Motor Speed (rpm) Vs. Braking Load (units) Plot ",
 	  fontSize: 20,
 	  fontColor:"#C90923",
 	  fontFamily: "times new roman",
@@ -823,7 +859,7 @@ createTable2();
 	  
 	  {
         interlacedColor: "#AFEEF8",
-        title: "Braking Load(in Units)"
+        title: "Braking Load (units)"
       },
 	  
 	  
@@ -832,7 +868,7 @@ createTable2();
 	  
     axisY: 
 	      {// Y axis
-            title: "Speed N(rpm)",
+            title: "Speed (rpm)",
 			
 			//maximum:28,
         },

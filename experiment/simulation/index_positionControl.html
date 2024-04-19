@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Study and operation of the DC Speed / Position control set up</title>
+    <title>Study and operation of the DC Speed and Position control setup</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,8 @@
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
-
+ <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
 
 <link rel="stylesheet" href="./css/positionC.css">
@@ -42,39 +43,34 @@
 
 
   <style>
-	.bluedot{
-	position:absolute;
-    border: 2px solid #0C0C0C;
+	.dial {
+	
+position:absolute;
+    border: 2px solid #060808;
     border-radius:50%;
-    background-color:#0C0C0C;
-    background-image:linear-gradient(90deg,#0C0C0C,#00ccff);
-	box-shadow: 5px 5px 8px #888888;
-	}
-	.handlep{
-	position:absolute;
-    border: 2px solid blue;
-    border-radius:50%;
-    background-color:white;
-    background-image:url(./images/plus.png);
-	background-size:cover;
-	background-position:center;
+    background-color:#060808;
+    background-image:linear-gradient(90deg,#060808,#3A3B3B);
 	
-	}
+	box-shadow: 5px 5px 8px #D9DBDB;
+}
+
+.dialhandle {
 	
-	.handlen{
-	position:absolute;
-    border: 2px solid blue;
-    border-radius:50%;
-    background-color:white;
-    background-image:url(./images/minus.jpg);
-	background-size:cover;
-	background-position:center;
-	
-	}
-	
-	
-	
-	
+position:absolute;
+cursor:pointer;
+background-color: #11B8C9;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow:  0 0 20px #fff, 0 0 30px #0867DF;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #023474;
+  }
+}
+
 	
   </style>
   
@@ -108,86 +104,49 @@
             </div><!--3rd col under 2nd row end-->
         </div><!--2nd row under 1st container end-->
         <hr>
-       <!-- <div class="d-flex p-1 text-primary">!--3rd row under 1st container start--
-          <div class="p-1" > <p class="h4"><a href="../index.html"> <span class="LN"> <b> Control and Instrumentation Lab </b></span> -- </a></p></div>
-          <div class="p-1"> <p class="h4"><a href="./index.html"> <span class="ExpN"> <b> Study and operation of the DC Speed / Position control set up </b> </span> </a></p></div>
-        </div>!--3rd row under 1st container end-->
+        
     </div><!--First Container under body tag end-->
     
-    <!--<div class="container p-3 my-5 text-primary text-center border">!--2nd Container under body tag start--
-        <div class="row">!--First row under 2nd container start--
-
-            <ul class="nav nav-pills nav-justified">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Introduction</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../aim.html">Objective</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../prequiz.html">Pre Quiz</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../theory.html">Theory</a>
-                </li>
-				<li class="nav-item">
-                  <a class="nav-link" href="../procedure.html">Procedure</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./index.html">Simulation</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../postquiz.html">Post Quiz</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../feedback.html">Feedback</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../references.html">References</a>
-                  </li>
-
-              </ul>
-        </div>!--First row under 2nd container end--
-    </div>!--2nd Container under body tag end-->
 	
     <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
         <div class="col-md-10"><!--2nd col under 3rd container start-->
             <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
-              <div id="inst" style="display:block;height:200px;overflow-y:auto;">
+              <div id="inst" style="display:block;height:200px;overflow-y:auto;text-align:justify">
 					
 					<ol> 
-					<span style="color:blue">Position Control</span><br/>
+					<b>Position Control</b><br/>
 					
-                      <li>At first connect the circuit diagram properly through the connecting dots(black dots)according to below instruction.<br/>
-					  Attenuator unit upper potentiometer point 1-Pre amplifier Unit 0v, Attenuator unit upper potentiometer point 2-Pre amplifier Unit point 1,					  
-					  Attenuator unit upper potentiometer point 3-Op Amp Unit point 6(lower one), Pre amplifier Unit point 3- Servo Amplifier point 1,
-					  Pre amplifier Unit point 4- Servo Amplifier point 2,Op Amp Unit +15v - input potentiometer point 2,Op Amp Unit -15v - input potentiometer point 1,
-					  Op Amp Unit point 1 - input potentiometer point 3,Power Supply +15v(right one) - output pot unit point 1,Power Supply -15v(right one) - output pot unit point 2,
-					  Op Amp Unit point 2 - output pot unit point 3(1st one),Op Amp Unit +15v - servo amplifier +15v, Op Amp Unit -15v - servo amplifier -15v, Op Amp Unit 0v - servo amplifier 0v,
-					  servo amplifier point(3-6,4-5,7-8),pre amplifier Unit +15v - Power Supply +15v(left one), pre amplifier Unit -15v - Power Supply -15v(left one),pre amplifier Unit 0v - Power Supply 0v(left one),
+                      <li>First connect the circuit diagram properly through the connecting dots (black dots) according to the instructions below.<br/><br/>
+					  
+					  Attenuator Unit upper potentiometer point 1 - Pre Amplifier Unit 0 V, Attenuator Unit upper potentiometer point 2 - Pre Amplifier Unit point 1,					  
+					  Attenuator Unit upper potentiometer point 3 - Op Amp Unit point 6 (lower one), Pre Amplifier Unit point 3 - Servo Amplifier point 1,
+					  Pre Amplifier Unit point 4 - Servo Amplifier point 2, Op Amp Unit +15 V - Input Potentiometer point 2, Op Amp Unit -15 V - Input Potentiometer point 1,
+					  Op Amp Unit point 1 - Input Potentiometer point 3, Power Supply +15 V (right one) - Output Pot Unit point 1, Power Supply -15 V (right one) - Output Pot Unit point 2,
+					  Op Amp Unit point 2 - Output Pot Unit point 3 (first one), Op Amp Unit +15 V - Servo Amplifier +15 V, Op Amp Unit -15 V - Servo Amplifier -15 V, Op Amp Unit 0 V - Servo Amplifier 0 V,
+					  Servo Amplifier point (3-6, 4-5, 7-8), Pre Amplifier Unit +15 V - Power Supply +15 V (left one), Pre Amplifier Unit -15 V - Power Supply -15 V (left one), Pre Amplifier Unit 0 V - Power Supply 0 V (left one).
 					  				  
 					  </li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.Then click on the 'Power' switch in Power Supply box ,the led will glow.</li><br/>
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' switch in Power Supply box , the led will glow.</li><br/>
 					 
-					 <li>Rotate the upper potentiometer knob in Attenuator Unit by clicking on the plus sign on it upto 8.Click on 'Rotate Pot' button plus sign to rotate input potentiometer cursor to an 
-					 arbitrary angle(ex:+10&deg;).Observe the output potentiometer cursor angle.Click on 'Show Table' button to show the observation table,observe the misalignment there.</li><br/>
-					 
-					 
-					<li>Now take 5 readings for clockwise raotation in same way and click on 'Show Table' button each time after changing input cursor angle.</li><br/> 
+					 <li>Rotate the upper potentiometer knob in Attenuator Unit upto 8. Click on 'Rotate Pot' button clockwise arrow sign to rotate Input Potentiometer cursor to an 
+					 arbitrary angle (ex:+10&deg;). Observe the output potentiometer (Output Pot Unit) cursor angle. Click on 'Show Table' button to get the observation data, observe the misalignment there.</li><br/>
 					 
 					 
-					<li>Now,click on 'Rotate Pot' button minus sign to rotate input potentiometer cursor to an arbitrary angle(ex:-10&deg;).Observe the output potentiometer cursor angle.
-					Click on 'Show Table' button to show the observation table,observe the misalignment there.</li><br/>
+					<li>Now take 5 readings for different angles in clockwise direction following step 3 and click on 'Show Table' button each time after changing input cursor angle.</li><br/> 
+					 
+					 
+					<li>Now click on 'Rotate Pot' button counter clockwise arrow sign to rotate Input Potentiometer cursor to an arbitrary angle (ex:-10&deg;). Observe the output potentiometer cursor angle.
+					Click on 'Show Table' button to get the observation data, observe the misalignment there.</li><br/>
 
-					<li>Now take 5 readings for anticlockwise raotation in same way and click on 'Show Table' button each time after changing input cursor angle.</li><br/> 
+					<li>Now take 5 readings for anticlockwise rotation following step 5 and click on 'Show Table' button each time after changing input cursor angle.</li><br/> 
 
-					<li> Rotate the upper potentiometer knob to its minimum value ,switch off the power.Click on 'Clear' button.</li><br/>
+					<li> Rotate the upper potentiometer knob to its minimum value , switch off the power. Click on 'Clear' button.</li><br/>
 					
-					 <li> To perform the experiment of controlling the speed of the motor click on 'Speed Control' button.Click on 'Pre amplifier Characteristics' button to observe the characteristics
-					 of the pre amplifier , click on 'Position Control' button to perform the experiment of controlling the position of the motor rotor.</li><br/>
+					 <li> To perform the experiment of controlling the speed of the motor click on 'Speed Control' button. Click on 'Pre Amplifier Characteristics' button to observe the characteristics
+					 of the Pre Amplifier , click on 'Position Control' button to perform the experiment of controlling the position of the motor rotor.</li><br/>
 					</ol>
 					<br><br>
 					 
@@ -222,7 +181,7 @@
 		<div id="bd28"></div>
 		</div>
 		<button type="button" id="tacho_olclSpeed"  class="btn btn-primary" onclick="part1_2_3()" >Speed Control</button>
-		<button type="button" id="preAmp_Char"  class="btn btn-primary" onclick="part4_5()" >Pre amplifier Characteristics</button>
+		<button type="button" id="preAmp_Char"  class="btn btn-primary" onclick="part4_5()" >Pre Amplifier Characteristics</button>
 		<button type="button" id="PositionC"  class="btn btn-primary " onclick="part6_7()" >Position Control</button>		
 		</div>
 		
@@ -245,7 +204,7 @@
 		</div>
 		<button type="button" id="check"  class="btn btn-primary " >Check Connection</button>
 		<button type="button" id="drawTable"  class="btn btn-info " onclick="createTable5()" >Show Table</button>
-		<button type="button" id="drawPlot"  class="btn btn-success " onclick="plot()" >Plot</button>
+		<!-- <button type="button" id="drawPlot"  class="btn btn-success " onclick="plot()" >Plot</button> -->
 		<button type="button" id="clear"  class="btn btn-danger " onclick="refresh()" >Clear</button>
 		
 		<input type="number" id="partchk" min="1" value="1" max="7" style="visibility:hidden;"><!--checks exp parts-->
@@ -256,7 +215,7 @@
 		
 		
 		
-		<div class="row"><!----------invisible gap for placing Tacho unit of dc motor-------------->
+		<div class="row"><!----------invisible gap for placing Tacho Unit of dc motor-------------->
 		
 		<div class="col-md-12" >
 		<div class="img-container">
@@ -284,7 +243,7 @@
 		
 		</div>
 		<button type="button" id="arc_change"  class="btn btn-warning " disabled=disable>
-		 <i class="fa fa-plus"  onclick="clkwise()" style="color:red"></i>Rotate Pot<i class="fa fa-minus"  onclick="anticlkwise()" style="color:red"></i>
+		 <i class="bi bi-arrow-clockwise"  onclick="clkwise()" style="color:red"></i>&nbsp;Rotate Pot&nbsp;<i class="bi bi-arrow-counterclockwise"  onclick="anticlkwise()" style="color:red"></i>
 		</button>
 		</div>
 		
@@ -374,16 +333,22 @@
 		
 		<img class="img-fluid " id="AU" src="images/AU.png " />
 		<!---knob 1 1st col 1st row--------->
-		<div class="bluedot" id="knob1" style=" width:21.5%;height:18.5%;top:13%;left:18.5%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob1" style=" width:21.5%;height:18.5%;top:13%;left:18.5%;pointer-events:none;">
 		<div class="handlep" id="knob1p" onclick="rotate1()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob1n"onclick="rotate2()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		</div> -->
+		<div id="knob1" class="dial"  style=" width:21.5%;height:18.5%;top:13%;left:18.5%;pointer-events:auto;">
+		<div class="dialhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
 		<input type="number" id="Au_up" min="0" value="0" max="10" step="1" style="position: absolute;width: 18%;height: 6%;top: 30%;left: 22%;text-align: center;background: transparent;border: none;"readOnly=readOnly>
 		
 		<!---knob 2 1st col 1st row--------->
-		<div class="bluedot" id="knob2" style=" width:22.4%;height:19%;top:51.5%;left:20.7%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob2" style=" width:22.4%;height:19%;top:51.5%;left:20.7%;pointer-events:none;">
 		<div class="handlep" id="knob2p" onclick="rotate3()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob2n"onclick="rotate4()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		</div> -->
+		<div id="knob2" class="dial"  style="width:22.4%;height:19%;top:51.5%;left:20.7%;pointer-events:auto;">
+		<div class="dialhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
 		<input type="number" id="Au_down" min="0" value="0" max="10" step="1" style="position: absolute;width: 23%;height: 6%;top: 69%;left: 22%;text-align: center;background: transparent;border: none;"readOnly=readOnly>
 		
@@ -473,7 +438,195 @@
         </footer>
       </div>
   </div><!--Last and fifth container under body tag end-->
-  
+  <script>
+
+var knobPositionX;
+      var knobPositionY;
+      var mouseX;
+      var mouseY;
+      var knobCenterX;
+      var knobCenterY;
+      var adjacentSide;
+      var oppositeSide;
+      var currentRadiansAngle;
+      var getRadiansInDegrees;
+      var finalAngleInDegrees;
+      var volumeSetting;
+      //var tickHighlightPosition;
+      //var audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp3"); //Celine Dion's "Ashes"
+      //var startingTickAngle = -135;
+      //var tickContainer = document.getElementById("tickContainer");
+      var knob1 = document.getElementById("knob1");
+	  var knob2 = document.getElementById("knob2");
+	  
+      var boundingRectangle1 = knob1.getBoundingClientRect(); //get rectangular geometric data of knob (x, y, width, height)
+	  var boundingRectangle2 = knob2.getBoundingClientRect();
+	 
+      function main1()
+      {
+          knob1.addEventListener(getMouseDown(), onMouseDown1); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp1); //listen for mouse button release
+	  }
+	  function main2()
+      {
+          knob2.addEventListener(getMouseDown(), onMouseDown2); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp2); //listen for mouse button release
+	  }
+	  
+      //on mouse buttons down
+      function onMouseDown1()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove1); //start drag
+      }	  
+	  function onMouseDown2()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove2); //start drag
+      }
+	  
+      //on mouse buttons release
+      function onMouseUp1()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove1); //stop drag
+      }
+	  function onMouseUp2()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove2); //stop drag
+      }
+	  
+      //compute mouse angle relative to center of volume knob
+      //For clarification, see my basic trig explanation at:
+      //https://www.quora.com/What-is-the-significance-of-the-number-pi-to-the-universe/answer/Kevin-Lam-15
+      function onMouseMove1(event)
+      {	  
+          knobPositionX = boundingRectangle1.left; //get knob's global x position
+          knobPositionY = boundingRectangle1.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle1.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle1.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob1.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.round(finalAngleInDegrees / (300 / 100));
+              var voltValue = volumeSetting * (10/100); 
+              document.getElementById("Au_up").value = math.round(voltValue);//+ "%"; //update volume text
+          }
+      }
+
+///knob2/////
+function onMouseMove2(event)
+      {
+          knobPositionX = boundingRectangle2.left; //get knob's global x position
+          knobPositionY = boundingRectangle2.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle2.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle2.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob2.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.floor(finalAngleInDegrees / (300 / 100));
+				var voltValue = volumeSetting * (10/100); 
+              document.getElementById("Au_down").value = math.round(voltValue);
+              
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+	  
+      //detect for mobile devices from https://www.sitepoint.com/navigator-useragent-mobiles-including-ipad/
+      function detectMobile()
+      {
+          var result = (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i));
+
+          if(result !== null)
+          {
+              return "mobile";
+          } else {
+              return "desktop";
+          }
+      }
+
+      function getMouseDown()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousedown";
+          } else {
+              return "touchstart";
+          }
+      }
+
+      function getMouseUp()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mouseup";
+          } else {
+              return "touchend";
+          }
+      }
+
+      function getMouseMove()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousemove";
+          } else {
+              return "touchmove";
+          }
+      }
+
+      main1();
+	  main2();
+	  
+</script>
   <script src="./js/jsPlumb.js"></script>	
 	<script src="./js/demo_positionC.js"> </script> 
 	 

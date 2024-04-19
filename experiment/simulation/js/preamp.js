@@ -229,7 +229,7 @@ function refresh(){
 	tabrowindex=1;
 	dataPoints3=[];
 	dataPoints4=[];
-	document.getElementById('plotbucket').style.display  = "none";	
+	document.getElementById('myPlot').style.display  = "none";	
 	
 	
 	
@@ -279,11 +279,11 @@ function createTable3() {//preamp gain
 
 
 
-	var y = new Array();
+	/* var y = new Array();
     var dataPoints3=[];
-	var dataPoints4=[];
+	var dataPoints4=[]; */
 	
-	function plot(){
+	/* function plot(){
 	 document.getElementById('plotbucket').style.display  = "block"; 
 	 document.getElementById('chartContainer').style.display  = "block";
 	 document.getElementById('result').style.display  = "block";
@@ -297,13 +297,15 @@ function createTable3() {//preamp gain
     }
  
 	
+ var text2 = 0;
  
 	var chart = new CanvasJS.Chart("chartContainer",
+	
     {
       //animationEnabled: true,
 		  //animationDuration: 10000, 
 	  title:{
-      text: "Pre amplifier output voltage v0(3) vo(4)(v) Vs. Input voltage Vi(volts) Plot ",
+      text: "Pre amplifier output voltage Vo(3) Vo(4) (V) Vs. Input voltage Vi (Volts) Plot ",
 	  fontSize: 20,
 	  fontColor:"#C90923",
 	  fontFamily: "times new roman",
@@ -313,18 +315,18 @@ function createTable3() {//preamp gain
 	  
 	  {
         interlacedColor: "#AFEEF8",
-        title: "Input voltage Vi(volts)"
+        title: "Input voltage Vi (Volts)"
       },
 	  
 	  
     axisY: [
 	      {// Y axis
-            title: "Vo(3) (v)",
+            title: "V0(3) (V)",
 			
 			//maximum:28,
         },
 		{// Y axis
-            title: "Vo(4) (v)",
+            title: "V0(4) (V)",
 			
 			//maximum:28,
         }
@@ -356,7 +358,116 @@ function createTable3() {//preamp gain
 	document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
 	chart.exportChart({format: "jpg"})});	
-	} 
+	}  */
+	
+	///plotly
+	
+	function plot(){
+	
+var dataArrayX = [];///x axis values
+var dataArrayY1 = [];///v03 axis values
+var dataArrayY2 = [];///v04 axis values
+
+document.getElementById('myPlot').style.display = "block";	
+	//if(document.getElementById('chkload').value == 1){
+var tableData = document.getElementById('myTable3');	
+	//}
+	
+//if(document.getElementById('chkload').value == 2){
+//var tableData = document.getElementById('unloading');	
+	//}	
+	
+for (var tabrowindex3 = 1; tabrowindex3 < tableData.rows.length; tabrowindex3++) {
+	var rwe3 = tableData.rows[tabrowindex3].cells;
+
+	dataArrayX.push( parseFloat(rwe3[1].innerHTML));
+	dataArrayY1.push( parseFloat(rwe3[2].innerHTML));
+	dataArrayY2.push( parseFloat(rwe3[3].innerHTML));
+}
+
+///plot using chart.js, not good 	
+/*new Chart("myPlot", {
+  type: "line",
+  data: {
+    labels: dataArrayX,
+    datasets: [{
+      fill: false,
+      //lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: dataArrayY
+    }]
+  },
+  /*options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
+});*/
+	
+///plot using plotly.js	
+
+var trace1 = {
+  x: dataArrayX,
+  y: dataArrayY1,
+  name: 'V<sub>0</sub> (3) (Volts)',
+  marker: {color:"red"},
+  type: 'line'
+};
+var trace2 = {
+  x: dataArrayX,
+  y: dataArrayY2,
+  name: 'V<sub>0</sub> (4) (Volts)',
+  marker: {color:"blue"},
+  type: 'line'
+};
+const data = [trace1, trace2];
+
+
+var layout = {
+  title: '<b>Pre amplifier output voltage V<sub>0</sub> (3) V<sub>0</sub> (4) (Volts) Vs. Input voltage V<sub>i</sub> (Volts) Plot</b>',
+  yaxis: {title: '<b>V<sub>0</sub> (3) and V<sub>0</sub> (4)</b>'},
+  yaxis2: {
+    title: 'V<sub>0</sub> (4)',
+    titlefont: {color: 'rgb(148, 103, 189)'},
+    tickfont: {color: 'rgb(148, 103, 189)'},
+    overlaying: 'y',
+    side: 'right'
+  }
+};
+
+Plotly.newPlot('myPlot', data, layout);
+	
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	///part1_2_3

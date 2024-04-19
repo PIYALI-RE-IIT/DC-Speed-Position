@@ -74,7 +74,7 @@ jsPlumb.ready(function () {
 					///black wire
 	endpoint_ground = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 5, stroke: "black" },
+            connectorStyle: { strokeWidth: 4, stroke: "black" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -90,7 +90,7 @@ jsPlumb.ready(function () {
 					
 			endpoint_blue = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "#55DEF6" },
+            connectorStyle: { strokeWidth: 4, stroke: "#55DEF6" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -200,7 +200,7 @@ jsPlumb.ready(function () {
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for clicking on a connection
+           if ( confirm("Delete connection ?")) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
        }); 

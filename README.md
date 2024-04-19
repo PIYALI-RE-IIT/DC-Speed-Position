@@ -7,23 +7,23 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Lab**
-<b> Experiment|     <b> **Study and operation of the DC Speed / Position control set up and Experiment 10**
+<b> Experiment|     <b> **Study and operation of the DC speed and position control setup and Experiment 10**
 
 
 ### About the Experiment 
-**System description**
+**DC Motors :**
 
-<b>DC Motors</b>
+The dc machine serves dual roles as both a generator and a motor, as depicted in Fig. 1. When functioning as a generator, mechanical power is supplied to the machine as input, yielding electrical power as output. A prime mover, such as a gas turbine, diesel engine, or electrical motor, spins the armature of the dc machine, generating dc power within it. Conversely, when utilized as a motor, electrical power is fed into the machine, resulting in mechanical power output. If the armature connects to a dc power source, the motor generates mechanical torque and power. Notably, the dc machine finds more frequent application as a motor rather than a generator. DC motors offer precise control over a wide range of speeds and torque. In both generator and motor modes, the armature winding rotates within a magnetic field, carrying current.
 
-The dc machine can operate both as a generator and as a motor. This is illustrated in Fig.below.When it operates as a generator, the input to the machine is mechanical power,and the output is electrical power. A prime mover rotates the armature of the dc machine, and dc power is generated in the machine. The prime mover can be a gas turbine,a diesel engine, or an electrical motor. When the dc machine operates as a motor, the input to the machine is electricalpower, and the output is mechanical power.If the armature is connected to a dc supply, the motor will develop mechanical torque and power. In fact, the dc machine is used more as a motor than as a generator.
-
-DC motors can provide a wide range of accurate speed and torque control.In both modes of operation (generator and motor) the armature winding rotates in the magnetic field and carries current.
 
 <div align="center">
-<img class="img-fluid"  src="experiment/images/gen_mot.png" alt="">                  
+<img class="img-fluid"  src="experiment/images/gen_mot2.png" alt="">
+
+<b>Fig. 1. Reversibility of a dc machine. (a)Generator. (b)Motor.</b>                  
 </div>
 
-<b>Name of Developer | <b> **Prof. Alok Kanti Deb**
+
+<b>Subject matter expertise | <b> **Prof. Alok Kanti Deb**
 :--|:--|
 <b> Institute | <b>  **Indian Institute of Technology Kharagpur**
 <b> Email id|     <b>  **alokkanti@ee.iitkgp.ac.in**
@@ -34,4 +34,5 @@ DC motors can provide a wide range of accurate speed and torque control.In both 
 
 SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | **Piyali Chattopadhyay** | Developer & Integration | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
+1 | **Piyali Chattopadhyay** | Developer | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
+2 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
