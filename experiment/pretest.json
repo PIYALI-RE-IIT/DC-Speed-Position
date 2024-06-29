@@ -16,9 +16,9 @@
       "question": "2. Small dc motors have best speed control by _________",
       "answers": {
         "a": "Armature voltage control",
-        "b": "Field resistance control",
-        "c": "Any of the above",
-        "d": "None of the mentioned above"
+        "b": "Tapped field control",
+        "c": "Rheostatic control method",
+        "d": "Field diverter method"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -28,7 +28,7 @@
       "answers": {
         "a": "1 only",
         "b": "1 and 2 both",
-        "c": " 2 only",
+        "c": "2 only",
         "d": "None of the above"
       },
       "correctAnswer": "a",
@@ -57,7 +57,7 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "6. The torque constant (K<sub>m</sub>), of a permanent magnet dc motor is 0.25 V sec/radian and armature resistance is 2 ohm. If the applied armature voltage is 90 V, then its zero speed torque is",
+      "question": "6. The torque constant (K<sub>m</sub>), of a permanent magnet dc motor is 0.25 V sec/radian and armature resistance is 2 &ohm;. If the applied armature voltage is 90 V, then its zero speed torque is",
       "answers": {
         "a": "10.45 N-m",
         "b": "11.25 N-m",

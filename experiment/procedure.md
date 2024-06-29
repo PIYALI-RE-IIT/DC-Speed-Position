@@ -4,7 +4,7 @@
 
 
 
-<b>Find Tacho Generator Constant :</b>
+<b>Find Tacho Generator Constant</b>
 
 <div align="center" >
 <img class="img-fluid"  src="./images/tgc.png" alt="">
@@ -36,7 +36,7 @@ from the slope in 'Motor Speed (rpm) Vs. Tacho generator voltage (Volts)' plot a
 6. Rotate the potentiometer knobs to its minimum value to stop the motor, switch off the power. Click on 'Clear' button.
 
  
-<b>Speed Control (Open Loop and Closed Loop) :</b>
+<b>Speed Control (Open Loop and Closed Loop)</b>
 
 <div align="center">
 <img class="img-fluid"  src="./images/sccl.png" alt="">
@@ -74,7 +74,7 @@ Op Amp Unit 0 V - Power Supply 0 V (left one), DC motor tacho unit lower point -
 
 
 
-<b>Pre Amplifier Characteristics :</b>
+<b>Pre Amplifier Characteristics</b>
 
 <div align="center">
 <img class="img-fluid"  src="./images/pac.png" alt="">
@@ -115,7 +115,7 @@ Click on 'Check Connection' button to make sure that proper connection has been 
 
 
 
-<b>Position Control :</b>
+<b>Position Control</b>
 
 <div align="center">
 <img class="img-fluid"  src="./images/posic.png" alt="">

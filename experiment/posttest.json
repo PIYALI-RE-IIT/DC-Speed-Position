@@ -50,7 +50,7 @@
       "answers": {
         "a": "220 V",
         "b": "110 V",
-		"c": "210 V",
+		    "c": "210 V",
         "d": "440 V"
         
       },
@@ -110,12 +110,11 @@
       "answers": {
         "a": "Armature resistance control",
         "b": "Field control",
-        "c": "Both of the above",
-        "d": "None of the above"
+        "c": "Ward Leonard control",
+        "d": "Flux control method"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
 }
-

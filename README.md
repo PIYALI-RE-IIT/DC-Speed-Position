@@ -6,12 +6,12 @@
 
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
-<b> Lab | <b> **Control and Instrumentation Lab**
-<b> Experiment|     <b> **Study and operation of the DC speed and position control setup and Experiment 10**
+<b> Lab | <b> **Control and Instrumentation Laboratory**
+<b> Experiment|     <b> **Study and operation of the DC speed and position control setup**
 
 
 ### About the Experiment 
-**DC Motors :**
+**DC Motors**
 
 The dc machine serves dual roles as both a generator and a motor, as depicted in Fig. 1. When functioning as a generator, mechanical power is supplied to the machine as input, yielding electrical power as output. A prime mover, such as a gas turbine, diesel engine, or electrical motor, spins the armature of the dc machine, generating dc power within it. Conversely, when utilized as a motor, electrical power is fed into the machine, resulting in mechanical power output. If the armature connects to a dc power source, the motor generates mechanical torque and power. Notably, the dc machine finds more frequent application as a motor rather than a generator. DC motors offer precise control over a wide range of speeds and torque. In both generator and motor modes, the armature winding rotates within a magnetic field, carrying current.
 

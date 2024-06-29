@@ -1,6 +1,6 @@
 ### Aim of the experiment
 
-1. To find the tachogenerator constant to measure the speed of the dc motor indirectly.
+1. To find the tachogenerator constant.
 
 2. Open loop and closed loop speed control of dc motor.
 

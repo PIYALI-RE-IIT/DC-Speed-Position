@@ -427,7 +427,8 @@ const data = [trace1, trace2];
 
 var layout = {
   title: '<b>Pre amplifier output voltage V<sub>0</sub> (3) V<sub>0</sub> (4) (Volts) Vs. Input voltage V<sub>i</sub> (Volts) Plot</b>',
-  yaxis: {title: '<b>V<sub>0</sub> (3) and V<sub>0</sub> (4)</b>'},
+  xaxis: {title: '<b>V<sub>i</sub> (Volts)</b>'},
+  yaxis: {title: '<b>V<sub>0</sub> (3) and V<sub>0</sub> (4) (Volts)</b>'},
   yaxis2: {
     title: 'V<sub>0</sub> (4)',
     titlefont: {color: 'rgb(148, 103, 189)'},
